@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bitcoinfool/therapeutic-ripples/static/css/main.b8762f62.chunk.css",
-    "main.js": "/bitcoinfool/therapeutic-ripples/static/js/main.f679753b.chunk.js",
-    "main.js.map": "/bitcoinfool/therapeutic-ripples/static/js/main.f679753b.chunk.js.map",
-    "runtime~main.js": "/bitcoinfool/therapeutic-ripples/static/js/runtime~main.0c305b8b.js",
-    "runtime~main.js.map": "/bitcoinfool/therapeutic-ripples/static/js/runtime~main.0c305b8b.js.map",
-    "static/js/2.ae026ab9.chunk.js": "/bitcoinfool/therapeutic-ripples/static/js/2.ae026ab9.chunk.js",
-    "static/js/2.ae026ab9.chunk.js.map": "/bitcoinfool/therapeutic-ripples/static/js/2.ae026ab9.chunk.js.map",
-    "static/js/3.940f5f6f.chunk.js": "/bitcoinfool/therapeutic-ripples/static/js/3.940f5f6f.chunk.js",
-    "static/js/3.940f5f6f.chunk.js.map": "/bitcoinfool/therapeutic-ripples/static/js/3.940f5f6f.chunk.js.map",
-    "index.html": "/bitcoinfool/therapeutic-ripples/index.html",
-    "precache-manifest.7250f3a049d0092ca3b39fb245887525.js": "/bitcoinfool/therapeutic-ripples/precache-manifest.7250f3a049d0092ca3b39fb245887525.js",
-    "service-worker.js": "/bitcoinfool/therapeutic-ripples/service-worker.js",
-    "static/css/main.b8762f62.chunk.css.map": "/bitcoinfool/therapeutic-ripples/static/css/main.b8762f62.chunk.css.map"
+    "main.css": "/therapeutic-ripples/static/css/main.b8762f62.chunk.css",
+    "main.js": "/therapeutic-ripples/static/js/main.f679753b.chunk.js",
+    "main.js.map": "/therapeutic-ripples/static/js/main.f679753b.chunk.js.map",
+    "runtime~main.js": "/therapeutic-ripples/static/js/runtime~main.d58d11ca.js",
+    "runtime~main.js.map": "/therapeutic-ripples/static/js/runtime~main.d58d11ca.js.map",
+    "static/js/2.ae026ab9.chunk.js": "/therapeutic-ripples/static/js/2.ae026ab9.chunk.js",
+    "static/js/2.ae026ab9.chunk.js.map": "/therapeutic-ripples/static/js/2.ae026ab9.chunk.js.map",
+    "static/js/3.940f5f6f.chunk.js": "/therapeutic-ripples/static/js/3.940f5f6f.chunk.js",
+    "static/js/3.940f5f6f.chunk.js.map": "/therapeutic-ripples/static/js/3.940f5f6f.chunk.js.map",
+    "index.html": "/therapeutic-ripples/index.html",
+    "precache-manifest.4a9be8c70fd7b8765321873ef10f4154.js": "/therapeutic-ripples/precache-manifest.4a9be8c70fd7b8765321873ef10f4154.js",
+    "service-worker.js": "/therapeutic-ripples/service-worker.js",
+    "static/css/main.b8762f62.chunk.css.map": "/therapeutic-ripples/static/css/main.b8762f62.chunk.css.map"
   }
 }
