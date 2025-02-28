@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/therapeutic-ripples/precache-manifest.4a9be8c70fd7b8765321873ef10f4154.js"
+  "/therapeutic-ripples/precache-manifest.707403b681114255709b51af5a41ba77.js"
 );
 
 self.addEventListener('message', (event) => {
