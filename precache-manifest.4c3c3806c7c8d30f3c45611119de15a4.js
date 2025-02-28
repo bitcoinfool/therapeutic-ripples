@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ef07264eed426a70d3f33f5b2415fa1d",
+    "revision": "d595ed34860a5dc47e07254ce5aa2362",
     "url": "/therapeutic-ripples/index.html"
   },
   {
-    "revision": "7175f93ede5047d88ba3",
+    "revision": "055f03cfa684e2ef2911",
     "url": "/therapeutic-ripples/static/css/main.b8762f62.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/therapeutic-ripples/static/js/3.940f5f6f.chunk.js"
   },
   {
-    "revision": "7175f93ede5047d88ba3",
-    "url": "/therapeutic-ripples/static/js/main.9269fd7d.chunk.js"
+    "revision": "055f03cfa684e2ef2911",
+    "url": "/therapeutic-ripples/static/js/main.996b8eb5.chunk.js"
   },
   {
     "revision": "71a5351bd48861813470",
