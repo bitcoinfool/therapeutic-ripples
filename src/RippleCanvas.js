@@ -8,6 +8,8 @@ const RippleCanvas = () => {
   const lastChimeFrequencyRef = useRef(null);
   const ambientStarted = useRef(false);
   const [showWelcome, setShowWelcome] = useState(true);
+  const [welcomeOpacity, setWelcomeOpacity] = useState(0);
+  const handleClickRef = useRef(null);
 
   // Define ambient music function outside useEffect so it can be called on tap.
   const playAmbientMusic = () => {
@@ -26,6 +28,9 @@ const RippleCanvas = () => {
   };
 
   useEffect(() => {
+    // Fade in the welcome overlay on mount.
+    setTimeout(() => setWelcomeOpacity(1), 50);
+
     // Create AudioContext.
     audioContextRef.current = new (window.AudioContext || window.webkitAudioContext)();
 
@@ -42,7 +47,7 @@ const RippleCanvas = () => {
     setCanvasSize();
     window.addEventListener('resize', setCanvasSize);
 
-    // Add a ripple with random variation in maximum radius.
+    // Add a ripple with random variation.
     const addRipple = (x, y, variation) => {
       const offsetX = (Math.random() - 0.5) * 20;
       const offsetY = (Math.random() - 0.5) * 20;
@@ -55,7 +60,7 @@ const RippleCanvas = () => {
       });
     };
 
-    // Play a soft chime with enhanced echo effects.
+    // Play a soft chime with echo effects.
     const playChime = () => {
       const audioCtx = audioContextRef.current;
       const oscillator = audioCtx.createOscillator();
@@ -105,6 +110,8 @@ const RippleCanvas = () => {
       playChime();
     };
 
+    // Store the click handler in a ref for future use.
+    handleClickRef.current = handleClick;
     canvas.addEventListener('click', handleClick);
 
     const animate = () => {
@@ -189,17 +196,17 @@ const RippleCanvas = () => {
       <canvas ref={canvasRef} style={{ display: 'block' }} />
       {showWelcome && (
         <div
-          onClick={() => {
+          onClick={(e) => {
             if (audioContextRef.current.state === 'suspended') {
               audioContextRef.current.resume();
             }
             playAmbientMusic();
-            setShowWelcome(false);
+            // Fade out the overlay before removing it.
+            setWelcomeOpacity(0);
             setTimeout(() => {
-              if (canvasRef.current) {
-                canvasRef.current.click();
-              }
-            }, 0);
+              setShowWelcome(false);
+              // Do not trigger a ripple on the first tap.
+            }, 1000);
           }}
           style={{
             position: 'absolute',
@@ -216,12 +223,14 @@ const RippleCanvas = () => {
             textAlign: 'center',
             zIndex: 10,
             padding: '20px',
+            opacity: welcomeOpacity,
+            transition: 'opacity 1s ease',
           }}
         >
           <h1>Welcome</h1>
-          <p>Tap anywhere to begin the calming experience.</p>
+          <p>Tap anywhere to begin.</p>
           <p style={{ fontSize: '0.8rem', marginTop: '10px' }}>
-            Remember to turn on sound for the full experience.
+            Turn on sound and disable silent mode for the full experience.
           </p>
           <p style={{ fontSize: '0.8rem', marginTop: '20px' }}>
             made by{' '}
@@ -233,7 +242,16 @@ const RippleCanvas = () => {
             >
               @bitcoinfool
             </a>{' '}
-            + React + ChatGPT
+            +{' '}
+            <a
+              href="https://react.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'white', textDecoration: 'underline' }}
+            >
+              React
+            </a>{' '}
+            + ChatGPT
           </p>
         </div>
       )}
